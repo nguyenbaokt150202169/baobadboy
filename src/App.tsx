@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Download, Loader2, Video, Music, AlertCircle, Trash2, X } from 'lucide-react';
+import { Download, Loader2, Video, Music, AlertCircle, Trash2, X, DownloadCloud } from 'lucide-react';
 
 type VideoData = {
   id: string;
@@ -85,9 +85,14 @@ export default function App() {
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900 p-6 font-sans">
       <div className="max-w-4xl mx-auto space-y-8">
-        <div className="text-center space-y-2">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-900">Batch Video Downloader</h1>
-          <p className="text-zinc-500">Download multiple videos from YouTube, TikTok, Facebook, and more.</p>
+        <div className="text-center space-y-4 flex flex-col items-center">
+          <div className="w-20 h-20 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center shadow-inner border border-indigo-200">
+            <DownloadCloud className="w-10 h-10" />
+          </div>
+          <div className="space-y-2">
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-900">Batch Video Downloader</h1>
+            <p className="text-zinc-500">Download multiple videos from YouTube, TikTok, Facebook, and more.</p>
+          </div>
         </div>
 
         <div className="bg-white p-6 rounded-2xl shadow-sm border border-zinc-200 space-y-4">
